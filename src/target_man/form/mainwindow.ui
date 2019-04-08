@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>712</width>
+    <height>466</height>
+   </rect>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../res/image.qrc">
+    <normaloff>:/icon48/target.png</normaloff>:/icon48/target.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="0">
+     <widget class="QTargetView" name="targetFrame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>712</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionNew"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionSave"/>
+    <addaction name="actionSaveAs"/>
+    <addaction name="actionPrint"/>
+    <addaction name="separator"/>
+    <addaction name="actionExport"/>
+    <addaction name="actionImport"/>
+    <addaction name="separator"/>
+    <addaction name="actionRefresh"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionCopy"/>
+    <addaction name="actionCut"/>
+    <addaction name="actionPaste"/>
+    <addaction name="actionAdd"/>
+    <addaction name="actionDelete"/>
+    <addaction name="separator"/>
+    <addaction name="actionUndo"/>
+    <addaction name="actionRedo"/>
+    <addaction name="separator"/>
+    <addaction name="actionHorAlign"/>
+    <addaction name="actionVerAlign"/>
+    <addaction name="actionLeftAlign"/>
+    <addaction name="actionRightAlign"/>
+    <addaction name="actionTopAlign"/>
+    <addaction name="actionBottomAlign"/>
+    <addaction name="separator"/>
+    <addaction name="actionSizeEqual"/>
+    <addaction name="actionHeightEqual"/>
+    <addaction name="actionWidthEqual"/>
+    <addaction name="actionHeightSplit"/>
+    <addaction name="actionWidthSplit"/>
+   </widget>
+   <widget class="QMenu" name="menuSetting">
+    <property name="title">
+     <string>Setting</string>
+    </property>
+    <addaction name="actionSerial"/>
+    <addaction name="actionTcpServer"/>
+    <addaction name="actionTcpClient"/>
+    <addaction name="separator"/>
+    <addaction name="actionBgColor"/>
+    <addaction name="actionBgImage"/>
+    <addaction name="actionFullScreen"/>
+   </widget>
+   <widget class="QMenu" name="menuData">
+    <property name="title">
+     <string>Data</string>
+    </property>
+    <addaction name="actionDepartment"/>
+    <addaction name="actionUser"/>
+    <addaction name="actionRole"/>
+    <addaction name="actionAdmin"/>
+    <addaction name="separator"/>
+    <addaction name="actionSoldier"/>
+    <addaction name="actionGallery"/>
+    <addaction name="actionTarget"/>
+    <addaction name="separator"/>
+    <addaction name="actionDataBase"/>
+    <addaction name="actionTrain"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAbout"/>
+    <addaction name="actionDocument"/>
+    <addaction name="actionConduct"/>
+    <addaction name="actionQA"/>
+   </widget>
+   <widget class="QMenu" name="menuControl">
+    <property name="title">
+     <string>Train</string>
+    </property>
+    <addaction name="actionNewTrain"/>
+    <addaction name="actionResetT"/>
+    <addaction name="actionRegisterT"/>
+    <addaction name="actionEndTrain"/>
+   </widget>
+   <widget class="QMenu" name="menuOperation">
+    <property name="title">
+     <string>Operation</string>
+    </property>
+    <addaction name="actionMouseSelect"/>
+    <addaction name="actionMouseDrag"/>
+    <addaction name="actionAntiAlias"/>
+    <addaction name="actionOpenGL"/>
+    <addaction name="separator"/>
+    <addaction name="actionZoomIn"/>
+    <addaction name="actionZoomOut"/>
+    <addaction name="separator"/>
+    <addaction name="actionRotateClock"/>
+    <addaction name="actionRotateAnti"/>
+    <addaction name="actionResetGraph"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuSetting"/>
+   <addaction name="menuControl"/>
+   <addaction name="menuData"/>
+   <addaction name="menuOperation"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="windowTitle">
+    <string>maintoolbar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionSaveAs"/>
+   <addaction name="actionPrint"/>
+   <addaction name="separator"/>
+   <addaction name="actionExport"/>
+   <addaction name="actionImport"/>
+   <addaction name="separator"/>
+   <addaction name="actionRefresh"/>
+   <addaction name="actionExit"/>
+   <addaction name="separator"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <widget class="QToolBar" name="ArrangeToolBar">
+   <property name="windowTitle">
+    <string>arrange toolbar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionHorAlign"/>
+   <addaction name="actionVerAlign"/>
+   <addaction name="actionLeftAlign"/>
+   <addaction name="actionRightAlign"/>
+   <addaction name="actionTopAlign"/>
+   <addaction name="actionBottomAlign"/>
+   <addaction name="separator"/>
+   <addaction name="actionSizeEqual"/>
+   <addaction name="actionWidthEqual"/>
+   <addaction name="actionHeightEqual"/>
+   <addaction name="separator"/>
+   <addaction name="actionHeightSplit"/>
+   <addaction name="actionWidthSplit"/>
+  </widget>
+  <widget class="QToolBar" name="toolBarComm">
+   <property name="windowTitle">
+    <string>common toolbar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionSerial"/>
+   <addaction name="actionTcpServer"/>
+   <addaction name="actionTcpClient"/>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>operation toolbar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>true</bool>
+   </attribute>
+   <addaction name="actionMouseSelect"/>
+   <addaction name="actionMouseDrag"/>
+   <addaction name="actionAntiAlias"/>
+   <addaction name="actionOpenGL"/>
+   <addaction name="actionZoomIn"/>
+   <addaction name="actionZoomOut"/>
+   <addaction name="actionRotateClock"/>
+   <addaction name="actionRotateAnti"/>
+   <addaction name="actionBgColor"/>
+   <addaction name="actionBgImage"/>
+   <addaction name="actionFullScreen"/>
+   <addaction name="actionResetGraph"/>
+  </widget>
+  <widget class="QDockWidget" name="dockWidget">
+   <property name="windowTitle">
+    <string>dockbar</string>
+   </property>
+   <attribute name="dockWidgetArea">
+    <number>1</number>
+   </attribute>
+   <widget class="QWidget" name="dockTool">
+    <layout class="QGridLayout" name="gridLayout_2">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item row="0" column="0">
+      <widget class="QTabWidget" name="tabWidget">
+       <property name="currentIndex">
+        <number>2</number>
+       </property>
+       <widget class="QWidget" name="tabProperty">
+        <attribute name="title">
+         <string>Property</string>
+        </attribute>
+       </widget>
+       <widget class="QWidget" name="tabToolbox">
+        <attribute name="title">
+         <string>Toolbox</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_3">
+         <item row="0" column="0">
+          <widget class="QToolBox" name="toolBox">
+           <property name="currentIndex">
+            <number>0</number>
+           </property>
+           <widget class="QWidget" name="page">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>256</width>
+              <height>236</height>
+             </rect>
+            </property>
+            <attribute name="label">
+             <string>Icon</string>
+            </attribute>
+           </widget>
+           <widget class="QWidget" name="page_2">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>98</width>
+              <height>28</height>
+             </rect>
+            </property>
+            <attribute name="label">
+             <string>buttons</string>
+            </attribute>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="tab">
+        <attribute name="title">
+         <string>Browser</string>
+        </attribute>
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QListWidget" name="listTarget"/>
+         </item>
+        </layout>
+       </widget>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/file/open.png</normaloff>:/file/open.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionSave">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/file/save.png</normaloff>:/file/save.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionSaveAs">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/file/saveAs.png</normaloff>:/file/saveAs.png</iconset>
+   </property>
+   <property name="text">
+    <string>SaveAs</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/file/print.png</normaloff>:/file/print.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+  </action>
+  <action name="actionExport">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon32/export.png</normaloff>:/icon32/export.png</iconset>
+   </property>
+   <property name="text">
+    <string>Export</string>
+   </property>
+  </action>
+  <action name="actionImport">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon32/import.png</normaloff>:/icon32/import.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import</string>
+   </property>
+  </action>
+  <action name="actionCopy">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/edit/copy.png</normaloff>:/edit/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionCut">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/edit/cut.png</normaloff>:/edit/cut.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cut</string>
+   </property>
+  </action>
+  <action name="actionPaste">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/edit/paste.png</normaloff>:/edit/paste.png</iconset>
+   </property>
+   <property name="text">
+    <string>Paste</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon24/remove.png</normaloff>:/icon24/remove.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+  </action>
+  <action name="actionAdd">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon24/add.png</normaloff>:/icon24/add.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/file/quit.png</normaloff>:/file/quit.png</iconset>
+   </property>
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/file/new.png</normaloff>:/file/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionUndo">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/edit/undo.png</normaloff>:/edit/undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Undo</string>
+   </property>
+  </action>
+  <action name="actionRedo">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/edit/redo.png</normaloff>:/edit/redo.png</iconset>
+   </property>
+   <property name="text">
+    <string>Redo</string>
+   </property>
+  </action>
+  <action name="actionRefresh">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon24/refresh.png</normaloff>:/icon24/refresh.png</iconset>
+   </property>
+   <property name="text">
+    <string>Refresh</string>
+   </property>
+  </action>
+  <action name="actionHorAlign">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/arrange/align_horizontal_center.png</normaloff>:/arrange/align_horizontal_center.png</iconset>
+   </property>
+   <property name="text">
+    <string>HorizonAlign</string>
+   </property>
+  </action>
+  <action name="actionVerAlign">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/arrange/align_vertical_center.png</normaloff>:/arrange/align_vertical_center.png</iconset>
+   </property>
+   <property name="text">
+    <string>VerticalAlign</string>
+   </property>
+  </action>
+  <action name="actionLeftAlign">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/arrange/align_left.png</normaloff>:/arrange/align_left.png</iconset>
+   </property>
+   <property name="text">
+    <string>LeftAlign</string>
+   </property>
+  </action>
+  <action name="actionRightAlign">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/arrange/align_right.png</normaloff>:/arrange/align_right.png</iconset>
+   </property>
+   <property name="text">
+    <string>RightAlign</string>
+   </property>
+  </action>
+  <action name="actionTopAlign">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/arrange/align_horizontal_top.png</normaloff>:/arrange/align_horizontal_top.png</iconset>
+   </property>
+   <property name="text">
+    <string>TopAlign</string>
+   </property>
+  </action>
+  <action name="actionBottomAlign">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/arrange/align_bottom.png</normaloff>:/arrange/align_bottom.png</iconset>
+   </property>
+   <property name="text">
+    <string>BottomAlign</string>
+   </property>
+  </action>
+  <action name="actionHeightEqual">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon24/equal_height.png</normaloff>:/icon24/equal_height.png</iconset>
+   </property>
+   <property name="text">
+    <string>HeightEqual</string>
+   </property>
+  </action>
+  <action name="actionWidthEqual">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon24/equal_width.png</normaloff>:/icon24/equal_width.png</iconset>
+   </property>
+   <property name="text">
+    <string>WidthEqual</string>
+   </property>
+  </action>
+  <action name="actionHeightSplit">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/arrange/heraction.png</normaloff>:/arrange/heraction.png</iconset>
+   </property>
+   <property name="text">
+    <string>HeightSplit</string>
+   </property>
+  </action>
+  <action name="actionSizeEqual">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon48/large.png</normaloff>:/icon48/large.png</iconset>
+   </property>
+   <property name="text">
+    <string>SizeEqual</string>
+   </property>
+  </action>
+  <action name="actionWidthSplit">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/arrange/veraction.png</normaloff>:/arrange/veraction.png</iconset>
+   </property>
+   <property name="text">
+    <string>WidthSplit</string>
+   </property>
+  </action>
+  <action name="actionNewTrain">
+   <property name="text">
+    <string>NewTrain</string>
+   </property>
+  </action>
+  <action name="actionResetT">
+   <property name="text">
+    <string>ResetTrain</string>
+   </property>
+  </action>
+  <action name="actionRegisterT">
+   <property name="text">
+    <string>RegisterTrainee</string>
+   </property>
+  </action>
+  <action name="actionUser">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon24/users 1.png</normaloff>:/icon24/users 1.png</iconset>
+   </property>
+   <property name="text">
+    <string>User</string>
+   </property>
+  </action>
+  <action name="actionRole">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon24/running.png</normaloff>:/icon24/running.png</iconset>
+   </property>
+   <property name="text">
+    <string>Role</string>
+   </property>
+  </action>
+  <action name="actionSoldier">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon24/soldier.png</normaloff>:/icon24/soldier.png</iconset>
+   </property>
+   <property name="text">
+    <string>Soldier</string>
+   </property>
+  </action>
+  <action name="actionAdmin">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon32/login.png</normaloff>:/icon32/login.png</iconset>
+   </property>
+   <property name="text">
+    <string>Admin</string>
+   </property>
+  </action>
+  <action name="actionGallery">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon48/shoot.png</normaloff>:/icon48/shoot.png</iconset>
+   </property>
+   <property name="text">
+    <string>Gallery</string>
+   </property>
+  </action>
+  <action name="actionTarget">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon48/target.png</normaloff>:/icon48/target.png</iconset>
+   </property>
+   <property name="text">
+    <string>Target</string>
+   </property>
+  </action>
+  <action name="actionTrain">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon32/sprite.png</normaloff>:/icon32/sprite.png</iconset>
+   </property>
+   <property name="text">
+    <string>Train</string>
+   </property>
+  </action>
+  <action name="actionDepartment">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/about/home.png</normaloff>:/about/home.png</iconset>
+   </property>
+   <property name="text">
+    <string>Department</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon24/sick.png</normaloff>:/icon24/sick.png</iconset>
+   </property>
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionDocument">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/about/home.png</normaloff>:/about/home.png</iconset>
+   </property>
+   <property name="text">
+    <string>Document</string>
+   </property>
+  </action>
+  <action name="actionConduct">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/about/contact.png</normaloff>:/about/contact.png</iconset>
+   </property>
+   <property name="text">
+    <string>Conduct</string>
+   </property>
+  </action>
+  <action name="actionQA">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/about/question.png</normaloff>:/about/question.png</iconset>
+   </property>
+   <property name="text">
+    <string>QA</string>
+   </property>
+  </action>
+  <action name="actionSerial">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon24/serial.png</normaloff>:/icon24/serial.png</iconset>
+   </property>
+   <property name="text">
+    <string>SerialPort</string>
+   </property>
+  </action>
+  <action name="actionTcpServer">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/file/ftp.png</normaloff>:/file/ftp.png</iconset>
+   </property>
+   <property name="text">
+    <string>TcpServer</string>
+   </property>
+  </action>
+  <action name="actionTcpClient">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon24/usb32.png</normaloff>:/icon24/usb32.png</iconset>
+   </property>
+   <property name="text">
+    <string>TcpClient</string>
+   </property>
+  </action>
+  <action name="actionDataBase">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon32/database.png</normaloff>:/icon32/database.png</iconset>
+   </property>
+   <property name="text">
+    <string>DataBase</string>
+   </property>
+  </action>
+  <action name="actionMouseSelect">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon32/arrow.png</normaloff>:/icon32/arrow.png</iconset>
+   </property>
+   <property name="text">
+    <string>MouseSelect</string>
+   </property>
+  </action>
+  <action name="actionMouseDrag">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon32/drag.png</normaloff>:/icon32/drag.png</iconset>
+   </property>
+   <property name="text">
+    <string>MouseDrag</string>
+   </property>
+  </action>
+  <action name="actionAntiAlias">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/file/new.png</normaloff>:/file/new.png</iconset>
+   </property>
+   <property name="text">
+    <string>AntiAlias</string>
+   </property>
+  </action>
+  <action name="actionOpenGL">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon32/opengl.png</normaloff>:/icon32/opengl.png</iconset>
+   </property>
+   <property name="text">
+    <string>OpenGL</string>
+   </property>
+  </action>
+  <action name="actionZoomIn">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/images/zoomin.png</normaloff>:/images/zoomin.png</iconset>
+   </property>
+   <property name="text">
+    <string>ZoomIn</string>
+   </property>
+  </action>
+  <action name="actionZoomOut">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/images/zoomout.png</normaloff>:/images/zoomout.png</iconset>
+   </property>
+   <property name="text">
+    <string>ZoomOut</string>
+   </property>
+  </action>
+  <action name="actionRotateClock">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/images/rotateright.png</normaloff>:/images/rotateright.png</iconset>
+   </property>
+   <property name="text">
+    <string>RotateClock</string>
+   </property>
+  </action>
+  <action name="actionRotateAnti">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/images/rotateleft.png</normaloff>:/images/rotateleft.png</iconset>
+   </property>
+   <property name="text">
+    <string>RotateAnti</string>
+   </property>
+  </action>
+  <action name="actionBgColor">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon24/bgcolor.png</normaloff>:/icon24/bgcolor.png</iconset>
+   </property>
+   <property name="text">
+    <string>BgColor</string>
+   </property>
+  </action>
+  <action name="actionBgImage">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon24/bgimage.png</normaloff>:/icon24/bgimage.png</iconset>
+   </property>
+   <property name="text">
+    <string>BgImage</string>
+   </property>
+  </action>
+  <action name="actionFullScreen">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon24/equal_size.png</normaloff>:/icon24/equal_size.png</iconset>
+   </property>
+   <property name="text">
+    <string>CanvasSize</string>
+   </property>
+  </action>
+  <action name="actionResetGraph">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon32/reset.png</normaloff>:/icon32/reset.png</iconset>
+   </property>
+   <property name="text">
+    <string>ResetGraph</string>
+   </property>
+  </action>
+  <action name="actionEndTrain">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon48/stop.png</normaloff>:/icon48/stop.png</iconset>
+   </property>
+   <property name="text">
+    <string>EndTrain</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QTargetView</class>
+   <extends>QFrame</extends>
+   <header location="global">../qtarget_graphic_view.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../res/image.qrc"/>
+ </resources>
+ <connections/>
+</ui>

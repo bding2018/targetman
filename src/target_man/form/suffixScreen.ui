@@ -1,0 +1,723 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>QWidgetSuffix</class>
+ <widget class="QWidget" name="QWidgetSuffix">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>831</width>
+    <height>579</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">*{
+font-family:'微软雅黑';
+color:white;
+}
+
+QWidget[objectName=&quot;QWidgetSuffix&quot;]{
+border-image:url(:/background/background_blue.png);
+}
+
+QTargetView{
+border-image:url(:/background/background_blue.png);
+}
+
+GraphicsView{
+border-image:url(:/background/background_blue.png);
+}
+
+/*ToolButton扁平化*/
+QToolButton[objectName=&quot;tbFullscreen&quot;] {
+border:0px;
+}
+QToolButton[objectName=&quot;tbFullscreen&quot;]:hover {
+image:url(:/icon24/fullscreen.png);
+}
+QToolButton[objectName=&quot;tbFullscreen&quot;]:pressed {
+image:url(:/icon24/fullscreen.png);
+}
+
+QToolButton[objectName=&quot;tbMaximize&quot;] {
+border:0px;
+}
+QToolButton[objectName=&quot;tbMaximize&quot;]:hover {
+image:url(:/icon24/maximize.png);
+}
+QToolButton[objectName=&quot;tbMaximize&quot;]:pressed {
+image:url(:/icon24/maximize.png);
+}
+
+QToolButton[objectName=&quot;menuToolButton&quot;] {
+border:0px;
+}
+QToolButton[objectName=&quot;menuToolButton&quot;]:menu-indicator{
+image:none;
+}
+QToolButton[objectName=&quot;menuToolButton&quot;]:hover {
+image:url(:/360/menu_hover.png);
+}
+QToolButton[objectName=&quot;menuToolButton&quot;]:pressed {
+image:url(:/360/menu_pressed.png);
+}
+
+QToolButton[objectName=&quot;minToolButton&quot;] {
+border:0px;
+}
+QToolButton[objectName=&quot;minToolButton&quot;]:hover {
+image:url(:/360/min_hover.png);
+}
+QToolButton[objectName=&quot;minToolButton&quot;]:pressed {
+image:url(:/360/min_pressed.png);
+}
+
+QToolButton[objectName=&quot;closeToolButton&quot;] {
+border:0px;
+}
+QToolButton[objectName=&quot;closeToolButton&quot;]:hover {
+image:url(:/360/close_hover.png);
+}
+QToolButton[objectName=&quot;closeToolButton&quot;]:pressed {
+image:url(:/360/close_pressed.png);
+}
+
+QToolButton[objectName=&quot;tbRefresh&quot;] {
+background-repeat:none;
+border:0px;
+}
+QToolButton[objectName=&quot;tbRefresh&quot;]:hover {
+background-color:rgb(200,200,200);
+}
+QToolButton[objectName=&quot;tbRefresh&quot;]:pressed {
+background-image:url(:/icon48/refresh_press.png);
+
+background-color:rgb(100,100,178);
+}
+QToolButton[objectName=&quot;tbRefresh&quot;]:checked {
+background-color:rgb(200,200,178);
+}
+
+QToolButton[objectName=&quot;tbMouse&quot;] {
+background-repeat:none;
+border:0px;
+}
+QToolButton[objectName=&quot;tbMouse&quot;]:hover {
+background-color:rgb(200,200,200);
+}
+QToolButton[objectName=&quot;tbMouse&quot;]:pressed {
+background-color:rgb(100,100,178);
+}
+QToolButton[objectName=&quot;tbMouse&quot;]:checked {
+background-color:rgb(200,200,178);
+}
+
+QToolButton[objectName=&quot;guardToolButton&quot;] {
+background-image:url(:/360/guard_open_normal.png);
+background-repeat:none;
+border:0px;
+}
+QToolButton[objectName=&quot;guardToolButton&quot;]:hover {
+background-image:url(:/360/guard_open_hover.png);
+
+}
+QToolButton[objectName=&quot;guardToolButton&quot;]:pressed {
+background-image:url(:/360/guard_open_press.png);
+}
+
+QToolButton[objectName=&quot;payinsureToolButton&quot;] {
+background-image:url(:/360/payinsure_close_normal.png);
+background-repeat:none;
+border:0px;
+}
+QToolButton[objectName=&quot;payinsureToolButton&quot;]:hover {
+background-image:url(:/360/payinsure_close_hover.png);
+
+}
+QToolButton[objectName=&quot;payinsureToolButton&quot;]:pressed {
+background-image:url(:/360/payinsure_close_press.png);
+}
+
+/*三文本颜色*/
+QToolButton[objectName=&quot;firewallToolButton&quot;],QToolButton[objectName=&quot;guardToolButton&quot;],QToolButton[objectName=&quot;payinsureToolButton&quot;] {
+background-position:10px 10px;
+color:black;
+}
+
+
+
+/*stackedWidget*/
+QStackedWidget {
+background-color:white;
+border-color:blue;
+background-color: rgb(170, 255, 255);
+}
+/*立即体检按钮*/
+QToolButton[objectName=&quot;checkToolButton&quot;] {
+border-radius:0px;
+}
+QToolButton[objectName=&quot;checkToolButton&quot;]:checked {
+image:url(:/360/check_pressed.png);
+}
+/*立即体检按钮*/
+QToolButton[objectName=&quot;checkToolButton&quot;] {
+border-radius:0px;
+}
+QToolButton[objectName=&quot;checkToolButton&quot;]:hover {
+image:url(:/360/check_hover.png);
+}
+QToolButton[objectName=&quot;checkToolButton&quot;]:pressed {
+image:url(:/360/check_pressed.png);
+}
+
+/**/
+QStackedWidget QToolButton {
+color:black;
+}
+QToolButton::hover{
+border:0px;
+}  
+</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_3">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <item>
+      <widget class="QLabel" name="label_logo">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>64</width>
+         <height>64</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="pixmap">
+        <pixmap resource="../res/target.qrc">:/logo/logo_pix.png</pixmap>
+       </property>
+       <property name="scaledContents">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>1</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>1677</width>
+         <height>1677</height>
+        </size>
+       </property>
+       <property name="contextMenuPolicy">
+        <enum>Qt::DefaultContextMenu</enum>
+       </property>
+       <property name="text">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; color:#ffff00;&quot;&gt;永万青&lt;/span&gt;&lt;span style=&quot; font-size:18pt; font-weight:600;&quot;&gt;&lt;br/&gt;&lt;/span&gt;&lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;江苏永万青科技股份有限公司&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QToolButton" name="tbFullscreen">
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../res/image.qrc">
+             <normaloff>:/icon24/fullscreen.png</normaloff>:/icon24/fullscreen.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="tbMaximize">
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../res/image.qrc">
+             <normaloff>:/icon24/maximize.png</normaloff>:/icon24/maximize.png</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="menuToolButton">
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../res/target.qrc">
+             <normaloff>:/360/menu_normal.png</normaloff>:/360/menu_normal.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>27</width>
+             <height>22</height>
+            </size>
+           </property>
+           <property name="autoRepeatDelay">
+            <number>100</number>
+           </property>
+           <property name="autoRepeatInterval">
+            <number>50</number>
+           </property>
+           <property name="popupMode">
+            <enum>QToolButton::InstantPopup</enum>
+           </property>
+           <property name="arrowType">
+            <enum>Qt::NoArrow</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="minToolButton">
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../res/target.qrc">
+             <normaloff>:/360/min_normal.png</normaloff>:/360/min_normal.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>27</width>
+             <height>22</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="closeToolButton">
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../res/target.qrc">
+             <normaloff>:/360/close_normal.png</normaloff>:/360/close_normal.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>27</width>
+             <height>22</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Minimum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>0</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QToolButton" name="tbReset">
+       <property name="text">
+        <string>加载配置</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../res/target.qrc">
+         <normaloff>:/360/ico_VulRepair.png</normaloff>:/360/ico_VulRepair.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
+        </size>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+       <property name="arrowType">
+        <enum>Qt::NoArrow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="tbRefresh">
+       <property name="text">
+        <string>自动刷新</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../res/target.qrc">
+         <normaloff>:/icon48/refresh_normal.png</normaloff>:/icon48/refresh_normal.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="autoRepeat">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+       <property name="arrowType">
+        <enum>Qt::NoArrow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="tbMouse">
+       <property name="toolTip">
+        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;点选&lt;/span&gt;单个靶标，&lt;span style=&quot; font-weight:600; color:#ff0000;&quot;&gt;框选&lt;/span&gt;多个靶标，按下表示手形&lt;span style=&quot; font-size:11pt; color:#ffaa00;&quot;&gt;拖拽&lt;/span&gt;漫游。&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+       </property>
+       <property name="text">
+        <string>拖拽选择</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../res/target.qrc">
+         <normaloff>:/icon48/arrow.png</normaloff>:/icon48/arrow.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+       <property name="arrowType">
+        <enum>Qt::NoArrow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="tbSelectAll">
+       <property name="text">
+        <string>全部选择</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../res/target.qrc">
+         <normaloff>:/360/computer.png</normaloff>:/360/computer.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+       <property name="arrowType">
+        <enum>Qt::NoArrow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="tbConfig">
+       <property name="text">
+        <string>系统设置</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../res/target.qrc">
+         <normaloff>:/360/ico_SysRepair.png</normaloff>:/360/ico_SysRepair.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+       <property name="arrowType">
+        <enum>Qt::NoArrow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="tbStart">
+       <property name="text">
+        <string>开始射击</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../res/image.qrc">
+         <normaloff>:/icon48/bullet.png</normaloff>:/icon48/bullet.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+       <property name="arrowType">
+        <enum>Qt::NoArrow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="tbStop">
+       <property name="text">
+        <string>停止射击</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../res/image.qrc">
+         <normaloff>:/icon48/shoot.png</normaloff>:/icon48/shoot.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>false</bool>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+       <property name="arrowType">
+        <enum>Qt::NoArrow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="tbRestore">
+       <property name="text">
+        <string>全部复位</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../res/image.qrc">
+         <normaloff>:/icon48/main.png</normaloff>:/icon48/main.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
+        </size>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+       <property name="arrowType">
+        <enum>Qt::NoArrow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="tbSwitch">
+       <property name="text">
+        <string>人员切换</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../res/target.qrc">
+         <normaloff>:/icon48/soldier.png</normaloff>:/icon48/soldier.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
+        </size>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+       <property name="arrowType">
+        <enum>Qt::NoArrow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="tbUser">
+       <property name="text">
+        <string>用户管理</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../res/target.qrc">
+         <normaloff>:/icon48/user.png</normaloff>:/icon48/user.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
+        </size>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>true</bool>
+       </property>
+       <property name="arrowType">
+        <enum>Qt::NoArrow</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTargetView" name="frame">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>90</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Plain</enum>
+     </property>
+    </widget>
+   </item>
+  </layout>
+  <zorder></zorder>
+  <zorder></zorder>
+  <zorder>frame</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QTargetView</class>
+   <extends>QFrame</extends>
+   <header location="global">../qtarget_graphic_view.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../res/target.qrc"/>
+  <include location="../res/image.qrc"/>
+ </resources>
+ <connections/>
+</ui>

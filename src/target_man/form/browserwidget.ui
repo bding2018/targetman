@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Browser</class>
+ <widget class="QWidget" name="Browser">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>799</width>
+    <height>564</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Qt SQL Browser</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../res/image.qrc">
+    <normaloff>:/icon24/sick.png</normaloff>:/icon24/sick.png</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QSplitter" name="splitter">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="tabCollapse">
+       <attribute name="title">
+        <string>平铺模型</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="0" column="0">
+         <widget class="QTreeWidget" name="tInfoTree">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Ignored" vsizetype="Expanding">
+            <horstretch>1</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <column>
+           <property name="text">
+            <string notr="true">1</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabQuery">
+       <attribute name="title">
+        <string>自定义查询</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QTextEdit" name="sqlEdit">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>18</height>
+           </size>
+          </property>
+          <property name="baseSize">
+           <size>
+            <width>0</width>
+            <height>120</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout">
+          <property name="spacing">
+           <number>6</number>
+          </property>
+          <property name="leftMargin">
+           <number>1</number>
+          </property>
+          <property name="topMargin">
+           <number>1</number>
+          </property>
+          <property name="rightMargin">
+           <number>1</number>
+          </property>
+          <property name="bottomMargin">
+           <number>1</number>
+          </property>
+          <item>
+           <spacer>
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="clearButton">
+            <property name="text">
+             <string>&amp;Clear</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="submitButton">
+            <property name="text">
+             <string>&amp;Submit</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabCascade">
+       <attribute name="title">
+        <string>层次模型</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QTreeWidget" name="treeCasecade">
+          <column>
+           <property name="text">
+            <string notr="true">names</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../res/image.qrc">
+             <normaloff>:/about/contact.png</normaloff>:/about/contact.png</iconset>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QComboBox" name="combField">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QComboBox" name="combOperator">
+           <item>
+            <property name="text">
+             <string>=</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>!=</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>like</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>&gt;=</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>&lt;=</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineCondition"/>
+         </item>
+         <item>
+          <widget class="QToolButton" name="tbSearch">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../res/image.qrc">
+             <normaloff>:/icon24/search.png</normaloff>:/icon24/search.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QToolButton" name="tbAdd">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="toolTip">
+            <string>add</string>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../res/image.qrc">
+             <normaloff>:/icon24/add.png</normaloff>:/icon24/add.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="tbDelete">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="toolTip">
+            <string>delete</string>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../res/image.qrc">
+             <normaloff>:/icon24/remove.png</normaloff>:/icon24/remove.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="tbSubmit">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="toolTip">
+            <string>submit</string>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../res/image.qrc">
+             <normaloff>:/icon24/select.png</normaloff>:/icon24/select.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QToolButton" name="tbRevert">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="toolTip">
+            <string>revert</string>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../res/image.qrc">
+             <normaloff>:/file/hide.png</normaloff>:/file/hide.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QTableView" name="table">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+           <horstretch>2</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::ActionsContextMenu</enum>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+  <action name="insertRowAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon24/add.png</normaloff>:/icon24/add.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Insert Row</string>
+   </property>
+   <property name="statusTip">
+    <string>Inserts a new Row</string>
+   </property>
+  </action>
+  <action name="deleteRowAction">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon24/remove.png</normaloff>:/icon24/remove.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Delete Row</string>
+   </property>
+   <property name="statusTip">
+    <string>Deletes the current Row</string>
+   </property>
+  </action>
+  <action name="fieldStrategyAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Submit on &amp;Field Change</string>
+   </property>
+   <property name="toolTip">
+    <string>Commit on Field Change</string>
+   </property>
+  </action>
+  <action name="rowStrategyAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Submit on &amp;Row Change</string>
+   </property>
+   <property name="toolTip">
+    <string>Commit on Row Change</string>
+   </property>
+  </action>
+  <action name="manualStrategyAction">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Submit &amp;Manually</string>
+   </property>
+   <property name="toolTip">
+    <string>Commit Manually</string>
+   </property>
+  </action>
+  <action name="submitAction">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon24/select.png</normaloff>:/icon24/select.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Submit All</string>
+   </property>
+   <property name="toolTip">
+    <string>Submit Changes</string>
+   </property>
+  </action>
+  <action name="revertAction">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon24/undo.png</normaloff>:/icon24/undo.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Revert All</string>
+   </property>
+   <property name="toolTip">
+    <string>Revert</string>
+   </property>
+  </action>
+  <action name="selectAction">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon24/refresh.png</normaloff>:/icon24/refresh.png</iconset>
+   </property>
+   <property name="text">
+    <string>S&amp;elect</string>
+   </property>
+   <property name="toolTip">
+    <string>Refresh Data from Database</string>
+   </property>
+  </action>
+  <action name="actionSort">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon24/down.png</normaloff>:/icon24/down.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Sort</string>
+   </property>
+   <property name="toolTip">
+    <string>排序</string>
+   </property>
+  </action>
+  <action name="actionFilter">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon32/filter.png</normaloff>:/icon32/filter.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Filter</string>
+   </property>
+   <property name="toolTip">
+    <string>过滤</string>
+   </property>
+  </action>
+  <action name="actionHide">
+   <property name="icon">
+    <iconset resource="../res/image.qrc">
+     <normaloff>:/icon48/eyeview.png</normaloff>:/icon48/eyeview.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Hide</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>clearButton</tabstop>
+  <tabstop>submitButton</tabstop>
+  <tabstop>tInfoTree</tabstop>
+  <tabstop>table</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../res/image.qrc"/>
+ </resources>
+ <connections/>
+</ui>

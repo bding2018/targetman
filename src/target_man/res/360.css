@@ -1,0 +1,142 @@
+* {
+font-family:'微软雅黑';
+color:white;
+}
+
+/*设置背景图片*/
+QWidget{
+border-image:url(":/360/background_mainwnd.png");
+}
+
+/*ToolButton扁平化*/
+QToolButton[objectName="skinToolButton"] {
+border:0px;
+}
+QToolButton[objectName="skinToolButton"]:hover {
+image:url(:/360/skin_hover.png);
+}
+QToolButton[objectName="skinToolButton"]:pressed {
+image:url(:/360/skin_pressed.png);
+}
+
+QToolButton[objectName="feedToolButton"] {
+border:0px;
+}
+QToolButton[objectName="feedToolButton"]:hover {
+image:url(:/360/feedback_hover.png);
+}
+QToolButton[objectName="feedToolButton"]:pressed {
+image:url(:/360/feedback_pressed.png);
+}
+
+QToolButton[objectName="menuToolButton"] {
+border:0px;
+}
+QToolButton[objectName="menuToolButton"]:hover {
+image:url(:/360/menu_hover.png);
+}
+QToolButton[objectName="menuToolButton"]:pressed {
+image:url(:/360/menu_pressed.png);
+}
+
+QToolButton[objectName="minToolButton"] {
+border:0px;
+}
+QToolButton[objectName="minToolButton"]:hover {
+image:url(:/360/min_hover.png);
+}
+QToolButton[objectName="minToolButton"]:pressed {
+image:url(:/360/min_pressed.png);
+}
+
+QToolButton[objectName="closeToolButton"] {
+border:0px;
+}
+QToolButton[objectName="closeToolButton"]:hover {
+image:url(:/360/close_hover.png);
+}
+QToolButton[objectName="closeToolButton"]:pressed {
+image:url(:/360/close_pressed.png);
+}
+
+QToolButton[objectName="firewallToolButton"] {
+background-image:url(:/360/firewall_open_normal.png);
+background-repeat:none;
+border:0px;
+}
+QToolButton[objectName="firewallToolButton"]:hover {
+background-image:url(:/360/firewall_open_hover.png);
+
+}
+QToolButton[objectName="firewallToolButton"]:pressed {
+background-image:url(:/360/firewall_open_press.png);
+}
+QToolButton[objectName="firewallToolButton"]:checked {
+background-color:rgb(244,0,0);
+}
+
+QToolButton[objectName="guardToolButton"] {
+background-image:url(:/360/guard_open_normal.png);
+background-repeat:none;
+border:0px;
+}
+QToolButton[objectName="guardToolButton"]:hover {
+background-image:url(:/360/guard_open_hover.png);
+
+}
+QToolButton[objectName="guardToolButton"]:pressed {
+background-image:url(:/360/guard_open_press.png);
+}
+
+QToolButton[objectName="payinsureToolButton"] {
+background-image:url(:/360/payinsure_close_normal.png);
+background-repeat:none;
+border:0px;
+}
+QToolButton[objectName="payinsureToolButton"]:hover {
+background-image:url(:/360/payinsure_close_hover.png);
+
+}
+QToolButton[objectName="payinsureToolButton"]:pressed {
+background-image:url(:/360/payinsure_close_press.png);
+}
+
+/*三文本颜色*/
+QToolButton[objectName="firewallToolButton"],QToolButton[objectName="guardToolButton"],QToolButton[objectName="payinsureToolButton"] {
+background-position:10px 10px;
+color:black;
+}
+
+
+
+/*stackedWidget*/
+QStackedWidget {
+background-color:white;
+border-color:blue;
+background-color: rgb(170, 255, 255);
+}
+/*立即体检按钮*/
+QToolButton[objectName="checkToolButton_2"] {
+border-radius:0px;
+}
+QToolButton[objectName="checkToolButton_2"]:checked {
+image:url(:/360/check_pressed.png);
+}
+/*立即体检按钮*/
+QToolButton[objectName="checkToolButton"] {
+border-radius:0px;
+}
+QToolButton[objectName="checkToolButton"]:hover {
+image:url(:/360/check_hover.png);
+}
+QToolButton[objectName="checkToolButton"]:pressed {
+image:url(:/360/check_pressed.png);
+}
+
+/**/
+QStackedWidget QToolButton {
+color:black;
+}
+QToolButton::hover{
+border:0px;
+}  
